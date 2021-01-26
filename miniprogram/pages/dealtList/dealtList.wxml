@@ -1,0 +1,44 @@
+<!--miniprogram/pages/dealtList/dealtList.wxml-->
+<view class="wrapper" wx:if="{{loading}}">
+  <calendarMonth bindmydata="mydata"></calendarMonth> 
+  <view class="card-list" wx:if="{{todos.length>0}}">
+    <view class="head-title">待办事项</view>
+    <view class="card-item" wx:for="{{todos}}">
+      <view class="time">
+        <view>{{item.date}} {{item.time}}</view>
+        <view>{{item.address}}</view>
+      </view>
+      <view class="con">
+          <view class="type">{{item.dealtType}}</view>
+          <view class="title">{{item.title}}</view>
+          <view class="btn">
+            <view catchtap="todosEdite" data-id="{{item._id}}" wx:if="{{!item.done}}">编辑</view>
+            <view data-id="{{item._id}}" catchtap="todosDelete">删除</view>
+            <view data-id="{{item._id}}" data-done="{{item.done}}" catchtap="todosComplete">{{item.done?'已完成':'完成'}}</view>
+          </view>
+      </view>
+      <view class="note">{{item.remarks}}</view>
+      <!-- <image class="todo-img" src="{{item.imgInfo.url}}"></image> -->
+    </view>  
+    <!-- <view class="head-title">已完成</view>
+    <view class="card-item" wx:for="{{todos}}" wx:if="{{item.done}}">
+      <view class="time">
+        <view>{{item.date}} {{item.time}}</view>
+        <view>{{item.address}}</view>
+      </view>
+      <view class="con">
+          <view class="type">{{item.dealtType}}</view>
+          <view class="title">{{item.title}}</view>
+          <view class="btn">
+            <view catchtap="todosEdite" data-id="{{item._id}}" wx:if="{{!item.done}}">编辑</view>
+            <view data-id="{{item._id}}" catchtap="todosDelete">删除</view>
+            <view data-id="{{item._id}}" data-done="{{item.done}}" catchtap="todosComplete">{{item.done?'已完成':'完成'}}</view>
+          </view>
+      </view>
+      <view class="note">{{item.remarks}}</view>
+    </view>  -->
+  </view>
+  <view class="no-data" wx:else>今日无待办，快来添加吧</view>
+</view>
+
+<view class="add-btn" catchtap="openAddBtn">+</view>

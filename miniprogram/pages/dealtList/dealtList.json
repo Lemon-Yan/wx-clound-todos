@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "calendarMonth": "../../components/calendarWeek/calendarWeek"
+  },
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle": "dark", 
+  "navigationBarTitleText":"我的待办"
+}

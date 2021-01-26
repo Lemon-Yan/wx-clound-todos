@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/dealtList/dealtList",
+    "pages/dealtAdd/dealtAdd"
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1cbbb4",
+    "navigationBarTitleText": "我的待办",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

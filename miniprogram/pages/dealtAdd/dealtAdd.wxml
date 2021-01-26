@@ -1,0 +1,42 @@
+<!--miniprogram/pages/dealtAdd/dealtAdd.wxml-->
+<view class="wrapper">
+  <view class="form">
+    <view class="form-item">
+      <view class="title">类型</view>
+      <picker class="form-picker" bindchange="bindPickerChange" value="{{index}}" range="{{dealtType}}">
+        <view class="picker">
+          {{dealTypeTxt}}
+        </view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <view class="title">标题</view>
+      <input class="form-input" type="text" value="{{title}}" placeholder="请输入..." bindinput="titleInput"/>
+    </view>
+    <view class="form-item">
+      <view class="title">日期</view>
+      <picker class="form-picker" mode="date" value="{{date}}" start="2021-01-01" bindchange="bindDateChange">
+        <view class="picker">
+           {{date}}
+        </view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <view class="title">时间</view>
+      <picker class="form-picker" mode="time" value="{{time}}" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time}}
+        </view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <view class="title">地点</view>
+      <input class="form-input" type="text" placeholder="请输入..." value="{{address}}" bindinput="addressInput"/>
+    </view>
+    <view class="form-item">
+      <view class="title">备注</view>
+      <input class="form-input" type="text" placeholder="请输入..." value="{{remarks}}" bindinput="remarksInput"/>
+    </view>
+  </view>
+  <view class="confirm-btn" catchtap="confirmBtn">确 定</view>
+</view>

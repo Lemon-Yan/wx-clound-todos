@@ -1,0 +1,52 @@
+/* miniprogram/pages/dealtAdd/dealtAdd.wxss */
+page {
+  background-color: #f7f7f7;
+}
+
+.form {
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+
+.form-item {
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  color: #333;
+  display: flex;
+  border-bottom: solid #f7f7f7 1rpx;
+}
+
+.form-item:last-child {
+  border: none;
+}
+
+.title {
+  color: #999;
+  width: 150rpx;
+}
+
+.form-input {
+  flex: 1;
+  height: 80rpx; 
+  line-height: 80rpx;
+  margin-top: 20rpx;
+}
+
+.form-picker {
+  flex: 1;
+}
+
+.confirm-btn{
+  font-size:36rpx;
+  color:#fff;
+  /* background-image: linear-gradient(45deg, #0081ff, #1cbbb4); */
+  background-color: #1cbbb4;
+  width:90%;
+  margin:50rpx 30rpx 30rpx;
+  height: 90rpx;
+  line-height:90rpx;
+  text-align:center;
+  border-radius: 50rpx;
+  letter-spacing: 6rpx;
+}
